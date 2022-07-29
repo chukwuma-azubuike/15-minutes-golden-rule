@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import BarChart from './BarChart';
+import PieChart from './PieChart';
+import DoughnutChart from './DoughnutChart';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [firstTime, setFirstTime] = React.useState();
+	const [rateService, setRateService] = React.useState();
+	const [enjoyedTheMost, setEnjoyedTheMost] = React.useState();
+	const [attendingWednesday, setAttendingWednesday] = React.useState();
+
+	React.useEffect(() => {
+		//Api Call here
+	}, []);
+
+	return (
+		<div className="App">
+			<div className="grid__container">
+				<div className="col-3__container">
+					<BarChart key="service-rating" />
+					<BarChart key="enjoyed-the-most" />
+					<PieChart key="first-timer" />
+				</div>
+				<div className="col-3__container">
+					<DoughnutChart key="attending-on-wednesday" />
+          <BarChart key="attendance-timeframe" />
+				</div>
+			</div>
+		</div>
+	);
 }
 
 export default App;
