@@ -3,6 +3,7 @@ import './App.css';
 import BarChart from './BarChart';
 import PieChart from './PieChart';
 import DoughnutChart from './DoughnutChart';
+import getResponseList from './api';
 
 function App() {
 	const [firstTime, setFirstTime] = React.useState();
@@ -12,6 +13,7 @@ function App() {
 
 	React.useEffect(() => {
 		//Api Call here
+		getResponseList();
 	}, []);
 
 	return (
@@ -24,7 +26,7 @@ function App() {
 				</div>
 				<div className="col-3__container">
 					<DoughnutChart key="attending-on-wednesday" />
-          <BarChart key="attendance-timeframe" />
+					<BarChart key="attendance-timeframe" />
 				</div>
 			</div>
 		</div>
