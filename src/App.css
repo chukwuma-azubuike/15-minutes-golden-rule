@@ -8,14 +8,22 @@ body, html {
 }
 
 .App {
-  height: 100%;
-  padding: 2rem 3rem;
+  height: 100vh;
+  padding: 2rem;
   box-sizing: var(--border-box);
   min-height: -webkit-fill-available;
 }
 
-.col-2__container, .col-3__container {
+.grid__container {
+  box-sizing: var(--border-box);
+  height: 100vh;
+  display: grid;
   gap: 1rem;
+}
+
+.col-2__container, .col-3__container {
+  gap: 2%;
+  height: max-content;
   display: grid;
   align-items: center;
   box-sizing: var(--border-box);
@@ -34,5 +42,5 @@ body, html {
 }
 
 .chart-canvas__container {
-  height: 10vh;
+  height: 100%;
 }

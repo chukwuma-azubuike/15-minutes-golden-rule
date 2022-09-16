@@ -3,7 +3,8 @@ import './App.css';
 import BarChart from './BarChart';
 import PieChart from './PieChart';
 import DoughnutChart from './DoughnutChart';
-import getResponseList from './api';
+// import getResponseList from './api';
+import start from './api/client';
 
 function App() {
 	const [firstTime, setFirstTime] = React.useState();
@@ -13,7 +14,8 @@ function App() {
 
 	React.useEffect(() => {
 		//Api Call here
-		getResponseList();
+		// getResponseList();
+		gapi.load('client', start);
 	}, []);
 
 	return (
@@ -24,7 +26,7 @@ function App() {
 					<BarChart key="enjoyed-the-most" />
 					<PieChart key="first-timer" />
 				</div>
-				<div className="col-3__container">
+				<div className="col-2__container">
 					<DoughnutChart key="attending-on-wednesday" />
 					<BarChart key="attendance-timeframe" />
 				</div>
