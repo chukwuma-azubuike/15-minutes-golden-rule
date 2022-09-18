@@ -34,12 +34,12 @@ function App() {
 		<div className="App">
 			<div className="grid__container">
 				<div className="col-3__container">
-					<BarChart key="service-rating" />
+					{/* <BarChart key="service-rating" />
 					<BarChart key="enjoyed-the-most" />
-					<PieChart key="first-timer" />
-					{/* <BarChart />
+					<PieChart key="first-timer" /> */}
 					<BarChart />
-					<PieChart /> */}
+					<BarChart />
+					<PieChart />
 				</div>
 				<div className="col-2__container">
 					<DoughnutChart key="attending-on-wednesday" />
