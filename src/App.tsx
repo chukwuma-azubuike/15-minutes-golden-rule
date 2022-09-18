@@ -20,7 +20,7 @@ function App() {
 	React.useEffect(() => {
 		//Api Call here
 		// getResponseList();
-		gapi.load('client', start);
+		// gapi.load('client', start);
 		fetch(
 			'https://mockend.com/chukwuma-azubuike/15-minutes-golden-rule/users'
 		)
