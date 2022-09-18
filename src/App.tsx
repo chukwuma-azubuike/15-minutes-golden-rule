@@ -21,6 +21,11 @@ function App() {
 		//Api Call here
 		// getResponseList();
 		gapi.load('client', start);
+		fetch(
+			'https://mockend.com/chukwuma-azubuike/15-minutes-golden-rule/users'
+		)
+			.then((res) => res.json())
+			.then((result) => console.log(result));
 	}, []);
 
 	// useGoogle();
