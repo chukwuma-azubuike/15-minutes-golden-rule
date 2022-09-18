@@ -1,3 +1,4 @@
+/* global gapi */
 import React from 'react';
 import './App.css';
 import BarChart from './BarChart';
@@ -5,6 +6,10 @@ import PieChart from './PieChart';
 import DoughnutChart from './DoughnutChart';
 // import getResponseList from './api';
 import start from './api/client';
+import { gapi } from 'gapi-script';
+// import BarChart from './Charts/BarCharts';
+// import PieChart from './Charts/PieCharts';
+// import useGoogle from './hooks/useGoogle';
 
 function App() {
 	const [firstTime, setFirstTime] = React.useState();
@@ -18,6 +23,8 @@ function App() {
 		gapi.load('client', start);
 	}, []);
 
+	// useGoogle();
+
 	return (
 		<div className="App">
 			<div className="grid__container">
@@ -25,10 +32,15 @@ function App() {
 					<BarChart key="service-rating" />
 					<BarChart key="enjoyed-the-most" />
 					<PieChart key="first-timer" />
+					{/* <BarChart />
+					<BarChart />
+					<PieChart /> */}
 				</div>
 				<div className="col-2__container">
 					<DoughnutChart key="attending-on-wednesday" />
 					<BarChart key="attendance-timeframe" />
+					{/* <PieChart />
+					<BarChart /> */}
 				</div>
 			</div>
 		</div>
