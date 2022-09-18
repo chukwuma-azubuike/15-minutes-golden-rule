@@ -1,5 +1,5 @@
 {
-	"Forms": {
+	"Users": {
 		"firstName": { "regexp": "[A-Z][a-z]" },
 		"lastName": { "regexp": "[A-Z][a-z]" },
 		"avatarUrl": {
