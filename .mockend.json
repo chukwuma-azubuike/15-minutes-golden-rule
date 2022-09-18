@@ -1,8 +1,7 @@
 {
-	"User": {
-		"name": {
-			"string": {}
-		},
+	"Forms": {
+		"firstName": { "regexp": "[A-Z][a-z]" },
+		"lastName": { "regexp": "[A-Z][a-z]" },
 		"avatarUrl": {
 			"regexp": "https://i\\.pravatar\\.cc/150\\?u=[0-9]{5}"
 		},
@@ -15,14 +14,13 @@
 		"color": {
 			"regexp": "#[0-9A-F]{6}"
 		},
-		"age": {
-			"int": {
-				"min": 21,
-				"max": 100
+		"transactionAmount": { "int": { "min": 500, "max": 10000 } },
+		"commission": { "int": { "min": 10, "max": 100 } },
+		"createdAt": {
+			"dateTime": {
+				"min": "2022-01-01T00:00:00Z",
+				"max": "2022-12-31T23:59:59Z"
 			}
-		},
-		"isPublic": {
-			"boolean": {}
 		}
 	}
 }
