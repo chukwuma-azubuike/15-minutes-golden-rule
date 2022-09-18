@@ -22,7 +22,7 @@ function App() {
 		// getResponseList();
 		// gapi.load('client', start);
 		fetch(
-			'https://mockend.com/chukwuma-azubuike/15-minutes-golden-rule/users'
+			'https://mockend.com/chukwuma-azubuike/15-minutes-golden-rule/forms'
 		)
 			.then((res) => res.json())
 			.then((result) => console.log(result));
